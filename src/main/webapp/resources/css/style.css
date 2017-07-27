@@ -1,0 +1,64 @@
+body {
+	margin: 5px;
+	font-size: 15px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header {
+	text-align: right;
+	background-color: #337ab7;
+	margin: 0;
+	padding-right: 10px;
+	font-size: 25px;
+	color: white;
+}
+
+.semBorda tr, .semBorda td {
+	border: none !important;
+}
+
+.form-login {
+	margin-top: 15%;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+}
+
+.form-login div {
+	text-align: right;
+}
+
+.alinhamento-esquerda {
+	margin-right: 100px;
+}
+
+.body-login {
+	background-color: #F0FFFF;
+}
+
+.center {
+	text-align: center;
+}
+
+.font-table {
+	font-size: 13px;
+}
+
+.btn-print {
+	margin-right: 5px;
+}
+
+.home-toolbar {
+	margin-bottom: 10px;
+}
+
+#username {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#label-login {
+	text-align: left;
+	padding-left: 36%;
+	margin-top: 10px;
+}
