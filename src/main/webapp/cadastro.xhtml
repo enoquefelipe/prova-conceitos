@@ -1,17 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" 
+	xmlns:p="http://primefaces.org/ui" 
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="/WEB-INF/template/layout.xhtml">
-	
+
 	<ui:define name="title">
 		<title><h:outputText value="Cadastro" /></title>
 	</ui:define>
 
 	<ui:define name="content">
 		<h:form>
+
+			<br></br>
 
 			<div class="form-horizontal">
 				<div class="form-group">
@@ -26,13 +28,27 @@
 						<h:inputText type="password" class="form-control" id="inputPassword3" placeholder="Password" />
 					</div>
 				</div>
+
+				<div class="form-group">
+					<p:outputLabel for="city" value="Editable: " styleClass="col-sm-2 control-label" />
+					<div class="col-sm-8">
+						<p:selectOneMenu id="city" value="#{NavigationBean.city}" converter="cityConverter">
+						
+							<f:selectItems value="#{NavigationBean.cities}" var="city" itemValue="#{city}" itemLabel="#{city.nome}"  />
+							
+							<p:ajax event="change" listener="#{NavigationBean.pegaDados}" process="@this" update="@form" />
+								
+						</p:selectOneMenu>
+					</div>
+				</div>
+
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<h:commandButton value="Enviar" type="submit" class="btn btn-primary" />
 					</div>
 				</div>
 			</div>
-			
+
 		</h:form>
 	</ui:define>
 </ui:composition>
