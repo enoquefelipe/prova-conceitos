@@ -7,9 +7,7 @@ import javax.faces.convert.FacesConverter;
 
 import com.conceito.model.City;
 
-//
 @FacesConverter("cityConverter")
-// @FacesConverter(forClass = City.class)
 public class CityConverter implements Converter {
 
 	@Override
