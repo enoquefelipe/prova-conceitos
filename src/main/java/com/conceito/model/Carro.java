@@ -36,6 +36,11 @@ public class Carro implements Serializable {
 
 	// Getters and Setters
 
+	@Override
+	public String toString() {
+		return modelo;
+	}
+
 	public int getId() {
 		return id;
 	}
