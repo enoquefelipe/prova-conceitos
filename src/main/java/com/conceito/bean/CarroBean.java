@@ -16,7 +16,7 @@ import com.conceito.model.TipoCarro;
  * @author enoque.felipe.d.leal
  *
  */
-@ManagedBean(name = "CarroBean")
+@ManagedBean(name = "carroBean")
 @SessionScoped
 public class CarroBean implements Serializable {
 
