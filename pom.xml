@@ -18,10 +18,12 @@
 
 		<servlet.version>3.0.1</servlet.version>
 		<jsf.version>2.2.9</jsf.version>
-		<primefaces.version>5.0</primefaces.version>
+		<primefaces.version>6.1</primefaces.version>
 		<jpa.version>1.0.0.Final</jpa.version>
 		<h2.version>1.4.191</h2.version>
 		<hibernate.version>4.2.0.Final</hibernate.version>
+		<poi.version>3.15</poi.version>
+		<junit.version>4.12</junit.version>
 
 		<version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
 		<version.jboss.bom>8.2.1.Final</version.jboss.bom>
@@ -122,8 +124,38 @@
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
-		    <version>4.12</version>
+		    <version>${junit.version}</version>  
 		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			 <version>${poi.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			 <version>${poi.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		
+		<dependency>
+			  <groupId>org.primefaces.extensions</groupId>
+			  <artifactId>primefaces-extensions</artifactId>
+			  <version>6.0.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.5</version>
 		</dependency>
 		
 		<!-- 
