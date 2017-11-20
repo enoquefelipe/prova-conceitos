@@ -1,6 +1,8 @@
 package com.conceito.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,6 +35,22 @@ public class Carro implements Serializable {
 
 	@Column(name = "type")
 	private TipoCarro tipo;
+	
+	private List<Carro> carros;
+	
+	public Carro(){
+		carros = new ArrayList<>();
+	}
+
+	public Carro(int id, String modelo, String anoDeFabricacao, String anoDeModelo, TipoCarro tipo) {
+		super();
+		carros = new ArrayList<>();
+		this.id = id;
+		this.modelo = modelo;
+		this.anoDeFabricacao = anoDeFabricacao;
+		this.anoDeModelo = anoDeModelo;
+		this.tipo = tipo;
+	}
 
 	// Getters and Setters
 
@@ -80,5 +98,13 @@ public class Carro implements Serializable {
 	public void setTipo(TipoCarro tipo) {
 		this.tipo = tipo;
 	}
-	
+
+	public List<Carro> getCarros() {
+		return carros;
+	}
+
+	public void setCarros(List<Carro> carros) {
+		this.carros = carros;
+	}
+
 }
