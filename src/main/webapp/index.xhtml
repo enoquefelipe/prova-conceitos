@@ -17,10 +17,10 @@
 
 			<h:panelGroup styleClass="pull-right">
 				<h:outputLabel for="selecionados" value="Registros selecionados: " />
-				<h:outputText id="selecionados" value="#{CarroBean.selectedCars.size()}" />
+				<h:outputText id="selecionados" value="#{carroBean.selectedCars.size()}" />
 				<span> - </span>
 				<h:outputLabel for="soma" value="Valor total: " />
-				<h:outputText id="soma" value="#{CarroBean.somaDosAnos}" />
+				<h:outputText id="soma" value="#{carroBean.somaDosAnos}" />
 			</h:panelGroup>
 
 			<br></br>
@@ -30,19 +30,19 @@
 						<p:commandButton icon="ui-icon-document" value="Novo" type="button" onclick="PF('dlg2').show();" />
 						<span class="ui-separator"> <span class="ui-icon ui-icon-grip-dotted-vertical" /></span>
 						<p:commandButton icon="ui-icon-pencil" title="Editar" />
-						<p:commandButton icon="ui-icon-trash" title="Excluir" action="#{CarroBean.remove()}" update="@form" />
+						<p:commandButton icon="ui-icon-trash" title="Excluir" action="#{carroBean.remove()}" update="@form" />
 					</f:facet>
 				</p:toolbar>
 
-				<p:dataTable id="checkboxDT" value="#{CarroBean.listCars}" var="carro" selection="#{CarroBean.selectedCars}" rowKey="#{carro}"
+				<p:dataTable id="checkboxDT" value="#{carroBean.listCars}" var="carro" selection="#{carroBean.selectedCars}" rowKey="#{carro}"
 					style="margin-bottom:0" paginator="true" paginatorPosition="bottom" emptyMessage="Nenhum registro encontrado!" styleClass="font-table"
-					rendered="#{CarroBean.oculta eq false}">
+					rendered="#{carroBean.oculta eq false}">
 
 					<f:facet name="header"> Carros 	</f:facet>
 
-					<p:ajax event="rowSelectCheckbox" listener="#{CarroBean.somarVeiculos}" update="@form" process="@this" />
-					<p:ajax event="rowUnselectCheckbox" listener="#{CarroBean.somarVeiculos}" update="@form" process="@this" />
-					<p:ajax event="toggleSelect" listener="#{CarroBean.somarVeiculos}" update="@form" process="@this" />
+					<p:ajax event="rowSelectCheckbox" listener="#{carroBean.somarVeiculos}" update="@form" process="@this" />
+					<p:ajax event="rowUnselectCheckbox" listener="#{carroBean.somarVeiculos}" update="@form" process="@this" />
+					<p:ajax event="toggleSelect" listener="#{carroBean.somarVeiculos}" update="@form" process="@this" />
 
 					<p:column style="width:40px; text-align:center;" selectionMode="multiple" />
 
@@ -63,10 +63,10 @@
 
 				<br></br>
 
-				<h:commandButton value="Imprimir" styleClass="btn btn-primary btn-print" action="#{CarroBean.imprimirCarros}" actionListener="#{CarroBean.mostraTabela}"
+				<h:commandButton value="Imprimir" styleClass="btn btn-primary btn-print" action="#{carroBean.imprimirCarros}" actionListener="#{carroBean.mostraTabela}"
 					update="@form" />
-				<h:commandButton value="Exibir" styleClass="btn btn-primary" action="#{CarroBean.findAllCarros}"
-					actionListener="#{CarroBean.mostraTabela}" update="@form" />
+				<h:commandButton value="Exibir" styleClass="btn btn-primary" action="#{carroBean.findAllCarros}"
+					actionListener="#{carroBean.mostraTabela}" update="@form" />
 
 			</h:panelGroup>
 
@@ -79,8 +79,8 @@
 					<div class="form-group">
 						<h:outputLabel styleClass="col-sm-2 control-label" value="Nome" for="nome" />
 						<div class="col-sm-8">
-							<h:inputText styleClass="form-control" id="nome" value="#{CarroBean.carro.modelo}" required="true">
-								<p:ajax event="click" update="tabela-dados" listener="#{CarroBean.escondeTabela}" />
+							<h:inputText styleClass="form-control" id="nome" value="#{carroBean.carro.modelo}" required="true">
+								<p:ajax event="click" update="tabela-dados" listener="#{carroBean.escondeTabela}" />
 							</h:inputText>
 						</div>
 					</div>
@@ -88,22 +88,22 @@
 					<div class="form-group">
 						<h:outputLabel styleClass="col-sm-2 control-label" value="Fabricação" for="fabricacao" />
 						<div class="col-sm-4">
-							<h:inputText styleClass="form-control" id="fabricacao" value="#{CarroBean.carro.anoDeFabricacao}" required="true" />
+							<h:inputText styleClass="form-control" id="fabricacao" value="#{carroBean.carro.anoDeFabricacao}" required="true" />
 						</div>
 					</div>
 
 					<div class="form-group">
 						<h:outputLabel styleClass="col-sm-2 control-label" value="Modelo" for="modelo" />
 						<div class="col-sm-4">
-							<h:inputText styleClass="form-control" id="modelo" value="#{CarroBean.carro.anoDeModelo}" required="true" />
+							<h:inputText styleClass="form-control" id="modelo" value="#{carroBean.carro.anoDeModelo}" required="true" />
 						</div>
 					</div>
 
 					<div class="form-group">
 						<h:outputLabel styleClass="col-sm-2 control-label" for="console" value="Categoria" />
 						<div class="col-sm-4">
-							<h:selectOneMenu id="console" value="#{CarroBean.carro.tipo}" styleClass="form-control">
-								<f:selectItems value="#{CarroBean.tipoCarro}" var="tipo" itemLabel="#{tipo.descricao}" itemValue="#{tipo}" />
+							<h:selectOneMenu id="console" value="#{carroBean.carro.tipo}" styleClass="form-control">
+								<f:selectItems value="#{carroBean.tipoCarro}" var="tipo" itemLabel="#{tipo.descricao}" itemValue="#{tipo}" />
 							</h:selectOneMenu>
 						</div>
 					</div>
@@ -111,7 +111,7 @@
 					<hr></hr>
 
 					<div class="text-center">
-						<h:commandButton value="Cadastrar" styleClass="btn btn-primary" action="#{CarroBean.cadastra()}" />
+						<h:commandButton value="Cadastrar" styleClass="btn btn-primary" action="#{carroBean.cadastra()}" />
 					</div>
 
 				</div>
