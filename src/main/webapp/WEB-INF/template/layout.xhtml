@@ -20,14 +20,19 @@
 	-->
 	<link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" />
 	<link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/css/bootstrap.css" />
+	<link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/css/template.css" />
 </h:head>
 	<h:body>
 	
-		<div class="header">
-			<span>Conceitos</span>
+		<div class="aw-topbar header">
+			<span>conceitos</span>
 		</div>
 	
-		<div class="container">
+		<aside class="aw-sidebar js-sidebar">
+			<ui:include src="menu.xhtml" />
+		</aside>
+	
+		<div class="aw-content js-content">
 			<ui:insert name="content" />
 		</div>
 	
