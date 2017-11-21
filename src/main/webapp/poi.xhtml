@@ -52,7 +52,7 @@
 				<br />
 
 				<p:commandButton value="Exportar para excel" ajax="false">
-					<pe:exporter type="xlsx" target="tabelda-dados" fileName="PlayersStatistics" subTable="true" />
+					<pe:exporter type="xlsx" target="tabelda-dados" fileName="cars-list" subTable="true" />
 				</p:commandButton>
 
 			</h:panelGroup>
@@ -89,7 +89,7 @@
 				<br />
 				
 	            <p:commandButton value="Exportar para excel" ajax="false">
-	                <p:dataExporter type="xlsx" target="tbl" fileName="cars" />
+	                <p:dataExporter type="xls" target="tbl" fileName="cars-list" />
            		 </p:commandButton>
 
 				<p:commandButton value="Imprimir" action="#{xLSBean.imprimir}" />
