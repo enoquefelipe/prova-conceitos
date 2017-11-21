@@ -18,7 +18,8 @@
 
 		<servlet.version>3.0.1</servlet.version>
 		<jsf.version>2.2.9</jsf.version>
-		<primefaces.version>6.1</primefaces.version>
+		<primefaces.version>4.0</primefaces.version>
+		<primefaces.extensions.version>1.2.1</primefaces.extensions.version>
 		<jpa.version>1.0.0.Final</jpa.version>
 		<h2.version>1.4.191</h2.version>
 		<hibernate.version>4.2.0.Final</hibernate.version>
@@ -51,10 +52,17 @@
 	</build>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>${primefaces.version}</version>
+		</dependency>
+
+		<dependency>
+			  <groupId>org.primefaces.extensions</groupId>
+			  <artifactId>primefaces-extensions</artifactId>
+			  <version>${primefaces.extensions.version}</version>
 		</dependency>
 
 		<dependency>
@@ -144,12 +152,6 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>${poi.version}</version>
-		</dependency>
-		
-		<dependency>
-			  <groupId>org.primefaces.extensions</groupId>
-			  <artifactId>primefaces-extensions</artifactId>
-			  <version>6.0.0</version>
 		</dependency>
 		
 		<dependency>
