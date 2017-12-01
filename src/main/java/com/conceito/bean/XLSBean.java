@@ -33,6 +33,7 @@ public class XLSBean implements Serializable {
 	}
 
 	private void putData() {
+		
 		cars = new ArrayList<>();
 		
 		Carro carroNovo = new Carro(1, "Novo", "2015", "2015", TipoCarro.HATCHE );

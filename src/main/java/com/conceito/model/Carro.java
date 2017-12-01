@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 /**
  * 
@@ -36,6 +37,7 @@ public class Carro implements Serializable {
 	@Column(name = "type")
 	private TipoCarro tipo;
 	
+	@Transient
 	private List<Carro> carros;
 	
 	public Carro(){

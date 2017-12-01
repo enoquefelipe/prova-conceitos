@@ -1,5 +1,6 @@
 package com.conceito.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,7 +14,9 @@ import com.conceito.util.JPAUtil;
  * @author enoque.felipe.d.leal
  *
  */
-public class CarroDao {
+public class CarroDao implements Serializable {
+
+	private static final long serialVersionUID = 135158058296104905L;
 
 	private EntityManager manager;
 
@@ -55,7 +58,7 @@ public class CarroDao {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void removeMultiplos(List<Carro> carros) {
 		try {
 			for (Carro carro : carros) {

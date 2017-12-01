@@ -32,7 +32,7 @@
 				<div class="form-group">
 					<p:outputLabel for="city" value="Editable: " styleClass="col-sm-2 control-label" />
 					<div class="col-sm-8">
-						<p:selectOneMenu id="city" value="#{NavigationBean.city}" converter="cityConverter">
+						<p:selectOneMenu id="city" value="#{NavigationBean.city}" converter="cityConverter" styleClass="" >
 						
 							<f:selectItems value="#{NavigationBean.cities}" var="city" itemValue="#{city}" itemLabel="#{city.nome}"  />
 							
